@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Payment.module.css";
 
 // Import axios instance
-import axios from "../../API/axios"; // make sure path is correct
+import axios from "../../API/axiosInstance"; // make sure path is correct
 
 // Firebase imports
 import { db } from "../../Components/Utility/firebase";
