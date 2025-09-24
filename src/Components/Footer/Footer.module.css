@@ -1,0 +1,96 @@
+.footer {
+  background-color: #232f3e;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px 60px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #3a4553;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.column {
+  width: 22%;
+}
+
+.column h4 {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.column li {
+  cursor: pointer;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.column li:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.middleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #3a4553;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 34px;
+  cursor: pointer;
+}
+
+select {
+  background-color: #37475a;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.bottomSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #ddd;
+  gap: 15px;
+}
+
+.bottomSection > div {
+  flex: 1 1 150px;
+  margin-bottom: 15px;
+}
+
+.bottomSection h5 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.footerNote {
+  text-align: center;
+  border-top: 1px solid #3a4553;
+  padding-top: 20px;
+  font-size: 11px;
+  color: #bbb;
+  line-height: 1.5;
+}

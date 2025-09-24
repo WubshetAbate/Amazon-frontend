@@ -1,0 +1,61 @@
+body{
+  font-family: Arial, sans-serif;
+}
+.lowerHeader {
+  background-color: #232f3e; /* Amazon dark navy */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  overflow-x: auto; 
+}
+
+.lowerHeaderList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+.lowerHeaderItem {
+  color: rgb(221, 216, 216);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s ease;
+}
+
+.lowerHeaderItem:hover {
+  border: 1px solid white;
+  background-color: #232f3e; 
+  color: white;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 576px) {
+  .lowerHeader {
+    padding: 0 10px;
+  }
+
+  .lowerHeaderList {
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  .lowerHeaderItem {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+}

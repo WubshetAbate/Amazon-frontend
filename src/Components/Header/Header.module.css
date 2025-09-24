@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #131921;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.delivery {
+  font-size: 12px;
+  display: flex;
+  gap: 9px;
+  text-align: left;
+}
+
+.delivery p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+/* Cart Icon specific style */
+.cart .icon {
+  color: #ffd814; /* Amazon yellow */
+  position: relative;
+  font-size: 24px;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #f7ca00; /* bright yellow badge */
+  color: #111;
+  font-weight: bold;
+  font-size: 12px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1px 1px white;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding-right: 18px;
+}
+
+.delivery span {
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search select {
+  padding: 5px;
+}
+
+.search input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+}
+
+.search button {
+  background: #febd69;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* clickable anchor links */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+a:hover {
+  border: 1px solid white;
+  background-color: #232f3e;
+  color: white;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flag {
+  width: 20px;
+  height: auto;
+}
+
+.link {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  cursor: pointer; /* ensure pointer */
+  background: none; /* remove button default */
+  border: none; /* remove button border */
+  color: #fefdfd;
+}
+
+.link p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.link span {
+  font-weight: bold;
+}
+
+/* Hover effect for both links and buttons */
+.link:hover {
+  border: 1px solid white;
+  background-color: #232f3e;
+  color: white;
+}

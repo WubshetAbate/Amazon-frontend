@@ -1,0 +1,67 @@
+.authPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.authBox {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.authBox h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.authBox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.authBox label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.authBox input {
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.signInBtn {
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 3px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.registerBtn {
+  background: lightgray;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  margin-top: 15px;
+  height: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.authBox p {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #111;
+}

@@ -1,0 +1,91 @@
+.paymentWrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.paymentWrapper h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paymentSection {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.paymentSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.paymentDetails {
+  padding-left: 10px;
+}
+
+.paymentDetails p {
+  margin: 4px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.paymentDetails h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b12704; /* Amazon red */
+}
+
+/* Stripe CardElement */
+.paymentDetails form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.paymentDetails button {
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.paymentDetails button:hover:enabled {
+  background: #f7ca00;
+}
+
+.paymentDetails button:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+  color: #999;
+}
+
+/* Messages */
+.error {
+  color: #b12704;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: green;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
