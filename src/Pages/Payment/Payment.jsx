@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Payment.module.css";
 
 // Import axios instance
-import axios from "../../API/axiosInstance"; // make sure path is correct
+import axiosInstance from "../../API/axiosInstance"; // cleaned extra semicolon
 
 // Firebase imports
 import { db } from "../../Components/Utility/firebase";
@@ -37,13 +37,13 @@ function Payment() {
     0
   );
 
-  // Fetch clientSecret when cart changes
+  // Fetch clientSecret from deployed backend
   useEffect(() => {
     if (total > 0 && cartItems.length > 0) {
       const getClientSecret = async () => {
         try {
           setLoadingClientSecret(true);
-          const response = await axios.post("/payment/create", {
+          const response = await axiosInstance.post("/payment/create", {
             total: Math.round(total * 100), // amount in cents
           });
           setClientSecret(response.data.clientSecret);
@@ -67,7 +67,6 @@ function Payment() {
       return;
     }
 
-    // Step 1: Save order as "pending"
     let orderRef = null;
     try {
       orderRef = await addDoc(
@@ -85,7 +84,6 @@ function Payment() {
       console.error("Error saving pending order:", err);
     }
 
-    // Step 2: Process payment with Stripe
     const payload = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
         card: elements.getElement(CardElement),
@@ -95,7 +93,6 @@ function Payment() {
       },
     });
 
-    // Step 3: Update order based on result
     if (payload.error) {
       setError(`Payment failed: ${payload.error.message}`);
       setProcessing(false);
@@ -123,7 +120,6 @@ function Payment() {
 
       clearCart();
 
-      // Redirect to Auth page with message instead of Orders
       setTimeout(() => {
         navigate("/auth", { state: { showLoginMessage: true } });
       }, 1000);
@@ -142,7 +138,6 @@ function Payment() {
       {cartItems.length === 0 && <p>Your cart is empty.</p>}
 
       <div className={styles.paymentContainer}>
-        {/* Delivery address */}
         <div className={styles.paymentSection}>
           <h3>Delivery Address</h3>
           <div className={styles.paymentDetails}>
@@ -152,7 +147,6 @@ function Payment() {
           </div>
         </div>
 
-        {/* Review items */}
         <div className={styles.paymentSection}>
           <h3>Review Items</h3>
           <div className={styles.paymentDetails}>
@@ -168,7 +162,6 @@ function Payment() {
           </div>
         </div>
 
-        {/* Payment form */}
         {cartItems.length > 0 && (
           <div className={styles.paymentSection}>
             <h3>Payment Method</h3>
